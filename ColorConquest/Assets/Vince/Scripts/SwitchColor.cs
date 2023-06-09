@@ -7,18 +7,17 @@ public class SwitchColor : MonoBehaviour
 {
     [SerializeField] Color[] availableColors;
     [SerializeField] SpriteRenderer[] colorSlots;
-    Camera cameraBg;
+    [SerializeField] PlayerMovement pm;
 
     [Header("Keyboard Inputs")]
     [SerializeField] KeyCode switchColorMode = KeyCode.Q;
     [SerializeField] KeyCode[] colorKeys;
 
     //Animation
-    PlayerAnimation playerAnim;
+    [SerializeField] PlayerAnimation playerAnim;
+    [SerializeField] GameObject colorUI;
     void Start()
     {
-        cameraBg = Camera.main;
-        playerAnim = GetComponent<PlayerAnimation>();
         InitColorSlots();
     }
 
@@ -38,36 +37,40 @@ public class SwitchColor : MonoBehaviour
 
     private void EnableColorMode()
     {
+        if (Input.GetKeyDown(switchColorMode))
+        {
+            playerAnim.SetPlayerColor("Default");
+        }
+
         if (Input.GetKey(switchColorMode))
         {
-            playerAnim.EnableUIColor(true);
+           
             GetColorChosen();
+            pm.enabled = false;
+            colorUI.SetActive(true);
         }
         else if (Input.GetKeyUp(switchColorMode))
         {
-            playerAnim.EnableUIColor(false);
+            pm.enabled = true;
+            colorUI.SetActive(false);
         }
+
+
     }
 
     void GetColorChosen()
     {
         if (Input.GetKeyDown(colorKeys[0]))
         {
-            SetBackgroundColor(availableColors[0]);
-
+            playerAnim.SetPlayerColor("red");
         }
         else if (Input.GetKeyUp(colorKeys[1]))
         {
-            SetBackgroundColor(availableColors[1]);
+            playerAnim.SetPlayerColor("orange");
         }
         else if (Input.GetKeyDown(colorKeys[2]))
         {
-            SetBackgroundColor(availableColors[2]);
+            playerAnim.SetPlayerColor("yellow");
         }
-    }
-
-    void SetBackgroundColor(Color color)
-    {
-        cameraBg.backgroundColor = color;
     }
 }

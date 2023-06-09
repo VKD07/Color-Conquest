@@ -4,10 +4,45 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    [SerializeField] Animator colorUIAnimator;
-    
+    [SerializeField] Animator playerAnim;
+    [SerializeField] PlayerMovement playerMovement;
+
     public void EnableUIColor(bool enable)
     {
-        colorUIAnimator.SetBool("ColorMode", enable);
+    }
+
+    public void PlayRunning(bool enable)
+    {
+        playerAnim.SetBool("Running", enable);
+    }
+
+    public void PlayJump()
+    {
+        playerAnim.SetTrigger("Jump");
+    }
+
+    public void Jump()
+    {
+        playerMovement.Jump();
+    }
+
+    public void SetPlayerColor(string color)
+    {
+        if (color == "red")
+        {
+            playerAnim.SetTrigger("DTR");
+        }
+        else if (color == "yellow")
+        {
+            playerAnim.SetBool("DTY", true);
+        }
+        else if (color == "orange")
+        {
+            playerAnim.SetBool("DTO", true);
+        }
+        else if (color == "Default")
+        {
+            playerAnim.SetTrigger("RTD");
+        }
     }
 }
