@@ -7,11 +7,13 @@ public class SwitchColor : MonoBehaviour
 {
     [SerializeField] Color[] availableColors;
     [SerializeField] SpriteRenderer[] colorSlots;
+    [SerializeField] string[] animationParameters;
     [SerializeField] PlayerMovement pm;
+    [SerializeField] public string currentColor;
 
     [Header("Keyboard Inputs")]
-    [SerializeField] KeyCode switchColorMode = KeyCode.Q;
     [SerializeField] KeyCode[] colorKeys;
+    [SerializeField] KeyCode switchColorMode = KeyCode.Q;
 
     //Animation
     [SerializeField] PlayerAnimation playerAnim;
@@ -52,17 +54,37 @@ public class SwitchColor : MonoBehaviour
 
     void GetColorChosen()
     {
-        if (Input.GetKeyDown(colorKeys[0]))
+        //if (Input.GetKeyDown(colorKeys[0]))
+        //{
+        //    playerAnim.SetPlayerColor(animationParameters[0]);
+        //}
+        //else if (Input.GetKeyUp(colorKeys[1]))
+        //{
+        //    playerAnim.SetPlayerColor(animationParameters[1]);
+        //}
+        //else if (Input.GetKeyDown(colorKeys[2]))
+        //{
+        //    playerAnim.SetPlayerColor(animationParameters[2]);
+        //}
+
+        for (int i = 0; i < colorKeys.Length; i++)
         {
-            playerAnim.SetPlayerColor("red");
+            if (Input.GetKeyDown(colorKeys[i]))
+            {
+                playerAnim.SetPlayerColor(animationParameters[i]);
+                currentColor = animationParameters[i];
+                ChangeLayerName(animationParameters[i]);
+            }
         }
-        else if (Input.GetKeyUp(colorKeys[1]))
+    }
+
+    void ChangeLayerName(string layerName)
+    {
+        int newLayerIndex = LayerMask.NameToLayer(layerName);
+
+        if (newLayerIndex != -1)
         {
-            playerAnim.SetPlayerColor("orange");
-        }
-        else if (Input.GetKeyDown(colorKeys[2]))
-        {
-            playerAnim.SetPlayerColor("yellow");
+            gameObject.layer = newLayerIndex;
         }
     }
 }
