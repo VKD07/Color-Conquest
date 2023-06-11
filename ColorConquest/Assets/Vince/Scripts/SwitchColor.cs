@@ -37,14 +37,8 @@ public class SwitchColor : MonoBehaviour
 
     private void EnableColorMode()
     {
-        if (Input.GetKeyDown(switchColorMode))
-        {
-            playerAnim.SetPlayerColor("Default");
-        }
-
         if (Input.GetKey(switchColorMode))
         {
-           
             GetColorChosen();
             pm.enabled = false;
             colorUI.SetActive(true);
@@ -54,8 +48,6 @@ public class SwitchColor : MonoBehaviour
             pm.enabled = true;
             colorUI.SetActive(false);
         }
-
-
     }
 
     void GetColorChosen()

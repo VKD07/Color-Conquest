@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        TriggerJump();
+        Jump();
     }
 
     private void Move()
@@ -49,16 +49,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void TriggerJump()
+    private void Jump()
     {
         if (Input.GetKeyDown(jump))
         {
             playerAnim.PlayJump();
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-    }
-
-    public void Jump()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 }

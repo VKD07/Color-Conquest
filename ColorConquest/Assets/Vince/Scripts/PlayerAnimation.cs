@@ -21,11 +21,6 @@ public class PlayerAnimation : MonoBehaviour
         playerAnim.SetTrigger("Jump");
     }
 
-    public void Jump()
-    {
-        playerMovement.Jump();
-    }
-
     public void SetPlayerColor(string color)
     {
         if (color == "red")
@@ -38,7 +33,7 @@ public class PlayerAnimation : MonoBehaviour
         }
         else if (color == "orange")
         {
-            playerAnim.SetBool("DTO", true);
+            playerAnim.SetTrigger("DTO");
         }
         else if (color == "Default")
         {
