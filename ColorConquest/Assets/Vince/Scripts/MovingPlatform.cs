@@ -39,7 +39,7 @@ public class MovingPlatform : MonoBehaviour
 
     void Move(float xDistance, float yDistance)
     {
-        if (currentTime < timeToReach && activatePlatform)
+        if (currentTime < timeToReach && activatePlatform && !destinationReached)
         {
             moving = true;
             currentTime += Time.deltaTime;
@@ -48,7 +48,6 @@ public class MovingPlatform : MonoBehaviour
         else if (currentTime >= timeToReach && moving)
         {
             destinationReached = true;
-            currentTime = 0;
             moving = false;
             rb.velocity = Vector2.zero;
         }
@@ -57,12 +56,11 @@ public class MovingPlatform : MonoBehaviour
         {
             if (currentTime > 0 && !activatePlatform)
             {
-                destinationReached = false;
                 currentTime -= Time.deltaTime;
                 rb.velocity = new Vector2(-2 * xDistance / timeToReach, -2 * yDistance / timeToReach);
             }
-            else
-            {
+            else if (currentTime <= 0)
+            { 
                 destinationReached = false;
                 rb.velocity = Vector2.zero;
             }
