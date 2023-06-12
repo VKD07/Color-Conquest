@@ -1,0 +1,841 @@
+fileFormatVersion: 2
+guid: 4da88e235fc434540a9f3500fc3a90b0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6844923998834694557
+    second: Blue - Purple_0
+  - first:
+      213: -8898480066870301824
+    second: Blue - Purple_1
+  - first:
+      213: -4073068052843577093
+    second: Blue - Purple_2
+  - first:
+      213: 2165648416331431289
+    second: Blue - Purple_3
+  - first:
+      213: 393837211229018219
+    second: Blue - Purple_4
+  - first:
+      213: -3954976766290465013
+    second: Blue - Purple_5
+  - first:
+      213: -1881757699596677624
+    second: Blue - Purple_6
+  - first:
+      213: 4620065459093240512
+    second: Blue - Purple_7
+  - first:
+      213: -5605077603831737895
+    second: Blue - Purple_8
+  - first:
+      213: -1553073530765413673
+    second: Blue - Purple_9
+  - first:
+      213: 5688891861535261883
+    second: Blue - Purple_10
+  - first:
+      213: -4046948014512549201
+    second: Blue - Purple_11
+  - first:
+      213: -4524162271772237405
+    second: Blue - Purple_12
+  - first:
+      213: 1235213964550399130
+    second: Blue - Purple_13
+  - first:
+      213: -3913500398802762939
+    second: Blue - Purple_14
+  - first:
+      213: -2004478475427146469
+    second: Blue - Purple_15
+  - first:
+      213: -3301356533711978721
+    second: Blue - Purple_16
+  - first:
+      213: -1373935739179792402
+    second: Blue - Purple_17
+  - first:
+      213: 1945447101997627897
+    second: Blue - Purple_18
+  - first:
+      213: 6221933388547353838
+    second: Blue - Purple_19
+  - first:
+      213: 1880602644052432801
+    second: Blue - Purple_20
+  - first:
+      213: -8798495475665828983
+    second: Blue - Purple_21
+  - first:
+      213: -1205181780272231525
+    second: Blue - Purple_22
+  - first:
+      213: 1790539913971122286
+    second: Blue - Purple_23
+  - first:
+      213: -7070872242469834802
+    second: Blue - Purple_24
+  - first:
+      213: -4271509859728243460
+    second: Blue - Purple_25
+  - first:
+      213: 3822827866917697193
+    second: Blue - Purple_26
+  - first:
+      213: -8528813857685607831
+    second: Blue - Purple_27
+  - first:
+      213: 5249789095563174566
+    second: Blue - Purple_28
+  - first:
+      213: -8792894959759379575
+    second: Blue - Purple_29
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue - Purple_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3868
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36669e693e1f101a0800000000000000
+      internalID: -6844923998834694557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_1
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 3868
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b2d4d768f328480800000000000000
+      internalID: -8898480066870301824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_2
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 3868
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0444c9f2e8977c0800000000000000
+      internalID: -4073068052843577093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_3
+      rect:
+        serializedVersion: 2
+        x: 2694
+        y: 3868
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d72d3b2cded0e10800000000000000
+      internalID: 2165648416331431289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_4
+      rect:
+        serializedVersion: 2
+        x: 3592
+        y: 3868
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68d2a26bd0377500800000000000000
+      internalID: 393837211229018219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_5
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 3868
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f655ed5991d19c0800000000000000
+      internalID: -3954976766290465013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2901
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e0f2a9757a2e5e0800000000000000
+      internalID: -1881757699596677624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_7
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 2901
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cafd409e05cd1040800000000000000
+      internalID: 4620065459093240512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_8
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 2901
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d19c15cd93c632b0800000000000000
+      internalID: -5605077603831737895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_9
+      rect:
+        serializedVersion: 2
+        x: 2694
+        y: 2901
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d27aa03adf527ae0800000000000000
+      internalID: -1553073530765413673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_10
+      rect:
+        serializedVersion: 2
+        x: 3592
+        y: 2901
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb48b6cc10103fe40800000000000000
+      internalID: 5688891861535261883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_11
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 2901
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2d182f83a56d7c0800000000000000
+      internalID: -4046948014512549201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1934
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1aac44262f631c0800000000000000
+      internalID: -4524162271772237405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_13
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1934
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94e0aa6e8c542110800000000000000
+      internalID: 1235213964550399130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_14
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 1934
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54303053f1470b9c0800000000000000
+      internalID: -3913500398802762939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_15
+      rect:
+        serializedVersion: 2
+        x: 2694
+        y: 1934
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b159f306279ae24e0800000000000000
+      internalID: -2004478475427146469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_16
+      rect:
+        serializedVersion: 2
+        x: 3592
+        y: 1934
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fbe2359b93f22d0800000000000000
+      internalID: -3301356533711978721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_17
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 1934
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee789f189bcceece0800000000000000
+      internalID: -1373935739179792402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 967
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9b1e3f4dd9ffa10800000000000000
+      internalID: 1945447101997627897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_19
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 967
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eece180a37fb85650800000000000000
+      internalID: 6221933388547353838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_20
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 967
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7d762142e391a10800000000000000
+      internalID: 1880602644052432801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_21
+      rect:
+        serializedVersion: 2
+        x: 2694
+        y: 967
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9838e073bf675e580800000000000000
+      internalID: -8798495475665828983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_22
+      rect:
+        serializedVersion: 2
+        x: 3592
+        y: 967
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bc9116e85564fe0800000000000000
+      internalID: -1205181780272231525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_23
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 967
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e604868a09649d810800000000000000
+      internalID: 1790539913971122286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf6a6798273fdd90800000000000000
+      internalID: -7070872242469834802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_25
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 0
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4c15cf96c88b4c0800000000000000
+      internalID: -4271509859728243460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_26
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 0
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6f715d0b96d0530800000000000000
+      internalID: 3822827866917697193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_27
+      rect:
+        serializedVersion: 2
+        x: 2694
+        y: 0
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a6839ebf093a980800000000000000
+      internalID: -8528813857685607831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_28
+      rect:
+        serializedVersion: 2
+        x: 3592
+        y: 0
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a223ca2e5ffad840800000000000000
+      internalID: 5249789095563174566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue - Purple_29
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 0
+        width: 898
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9833830fe9c59f580800000000000000
+      internalID: -8792894959759379575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
