@@ -301,7 +301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3106587294775651613}
-  - component: {fileID: 3106587294775651612}
+  - component: {fileID: 3028811872213980257}
   - component: {fileID: 3106587294775651615}
   - component: {fileID: 3106587294775651614}
   - component: {fileID: 3106587294775651681}
@@ -329,7 +329,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3106587294775651612
+--- !u!114 &3028811872213980257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,16 +338,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3106587294775651683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb38d40e5bb030d4ba3b5e06069f9995, type: 3}
+  m_Script: {fileID: 11500000, guid: 407025a3cb6db204e8bca02bbd0fe013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveLeft: 276
-  moveRight: 275
+  left: 276
+  right: 275
   jump: 273
-  movementSpeed: 4
-  jumpForce: 20
-  sr: {fileID: 3106587294928612716}
-  playerAnim: {fileID: 3106587294928612718}
+  rb: {fileID: 0}
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &3106587294775651615
 Rigidbody2D:
   serializedVersion: 4
@@ -419,7 +420,7 @@ MonoBehaviour:
   - DTP
   - DTB
   - DTG
-  pm: {fileID: 3106587294775651612}
+  pm: {fileID: 0}
   currentColor: 
   colorKeys: 110100001301000014010000
   switchColorMode: 113
