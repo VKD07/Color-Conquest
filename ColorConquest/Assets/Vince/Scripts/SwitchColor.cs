@@ -8,7 +8,7 @@ public class SwitchColor : MonoBehaviour
     [SerializeField] Color[] availableColors;
     [SerializeField] SpriteRenderer[] colorSlots;
     [SerializeField] string[] animationParameters;
-    [SerializeField] PlayerMovement pm;
+    [SerializeField] PlayerMovementScript pm;
     [SerializeField] public string currentColor;
 
     [Header("Keyboard Inputs")]
