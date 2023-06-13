@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,12 +22,17 @@ public class PlayerMovementScript : MonoBehaviour
     [SerializeField] bool enableDoubleJump;
     [SerializeField] bool enableCrouch;
     [SerializeField] bool enableCrawl;
+    public KeyCode crouch = KeyCode.DownArrow;
     bool doubleJump;
+    public bool moving;
+    BoxCollider2D boxCollider;
+    Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        boxCollider = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -41,6 +47,7 @@ public class PlayerMovementScript : MonoBehaviour
             velocity = new Vector2(-movementSpeed, velocity.y);
             transform.rotation = Quaternion.Euler(0, 180, 0);
             playerAnim.PlayRunning(true);
+            moving = true;
         }
 
         else if (Input.GetKey(right))
@@ -48,12 +55,14 @@ public class PlayerMovementScript : MonoBehaviour
             velocity = new Vector3(movementSpeed, velocity.y);
             transform.rotation = Quaternion.identity;
             playerAnim.PlayRunning(true);
+            moving = true;
         }
 
         else
         {
             velocity = new Vector3(0, velocity.y);
             playerAnim.PlayRunning(false);
+            moving = false;
         }
 
         if (isGrounded && !Input.GetKeyDown(jump))
@@ -84,12 +93,70 @@ public class PlayerMovementScript : MonoBehaviour
                 }
             }
         }
-
+        if (!isGrounded)
+        {
+            moving = true;
+        }
         rbComponent.velocity = velocity;
 
-        //**Insert Crouching below this line**
+        //**Insert Crouching below this line**/
+        Crouching();
     }
 
+    private void Crouching()
+    {
+        if (enableCrouch)
+        {
+            if (Input.GetKey(crouch))
+            {
+                playerAnim.PlayCrouch(true);
+                ReducePlayerHeight(true);
+                Crawling();
+
+            }else if (Input.GetKeyUp(crouch))
+            {
+                ReducePlayerHeight(false);
+                playerAnim.PlayCrouch(false);
+                playerAnim.PlayCrawl(false);
+            }
+        }
+    }
+
+    private void Crawling()
+    {
+        if(playerAnim.isRunning)
+        {
+            playerAnim.PlayCrawl(true);
+        }
+        else
+        {
+            playerAnim.PlayCrawl(false);
+        }
+    }
+
+    void ReducePlayerHeight(bool value)
+    {
+        if(value)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+            boxCollider.size = new Vector2(1f, 0.5f);
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            boxCollider.size = new Vector2(1f, 1.3f);
+        }
+    }
+
+    public bool playerMoving
+    {
+        get
+        {
+            return moving;
+        }
+    }
 
     private void OnCollisionStay2D(Collision2D collision)
     {

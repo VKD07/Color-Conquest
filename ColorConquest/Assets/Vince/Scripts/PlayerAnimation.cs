@@ -15,6 +15,14 @@ public class PlayerAnimation : MonoBehaviour
         playerAnim.SetBool("Running", enable);
     }
 
+    public bool isRunning
+    {
+        get
+        {
+           return playerAnim.GetBool("Running");
+        }
+    }
+
     public void PlayJump()
     {
         playerAnim.SetTrigger("Jump");
@@ -23,5 +31,15 @@ public class PlayerAnimation : MonoBehaviour
     public void SetPlayerColor(string color)
     {
         playerAnim.SetTrigger(color);
+    }
+
+    public void PlayCrouch(bool enable)
+    {
+        playerAnim.SetBool("Crouch", enable);
+    }
+
+    public void PlayCrawl(bool enable)
+    {
+        playerAnim.SetBool("Crawl", enable);
     }
 }
