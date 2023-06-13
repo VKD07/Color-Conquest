@@ -9,11 +9,15 @@ public class FlakMovement : MonoBehaviour
     public KeyCode jump;
     public KeyCode crouch;
 
-    float jumpPower = 20f;
+    [SerializeField] float movementSpeed = 5f;
+
+    [SerializeField] float jumpPower = 20f;
 
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] Transform groundCheck;
-    [SerializeField] LayerMask groundLayer;
+    [SerializeField] PlayerAnimation playerAnim;
+
+    //vince Added code
+    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -30,40 +34,59 @@ public class FlakMovement : MonoBehaviour
 
         if (Input.GetKey(left))
         {
-            velocity = new Vector2(-10, velocity.y);
+            velocity = new Vector2(-movementSpeed, velocity.y);
             transform.rotation = Quaternion.Euler(0, 180, 0);
             print("moving left");
+            playerAnim.PlayRunning(true);
         }
 
         else if (Input.GetKey(right))
         {
-            velocity = new Vector3(10, velocity.y);
+            velocity = new Vector3(movementSpeed, velocity.y);
             transform.rotation = Quaternion.identity;
             print("moving right");
+            playerAnim.PlayRunning(true);
         }
 
         else
         {
+            playerAnim.PlayRunning(false);
             velocity = new Vector3(0, velocity.y);
         }
 
 
-        if (Input.GetKeyDown(jump))
-        {
-            if (IsGrounded())
-            {
-                velocity = new Vector3(velocity.x, jumpPower);
-            }
-
-            print("jumping");
-        }
 
         rbComponent.velocity = velocity;
     }
 
-    private bool IsGrounded()
+    void Jump()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+
+        if (Input.GetKeyDown(jump))
+        {
+            if (isGrounded)
+            {
+                playerAnim.PlayJump();
+              //  velocity = new Vector3(velocity.x, jumpPower);
+            }
+        }
+    }
+
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Player")
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Player")
+        {
+            isGrounded = false;
+        }
     }
 
 }

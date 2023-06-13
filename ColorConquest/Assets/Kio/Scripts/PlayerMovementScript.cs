@@ -2,20 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlikMovement : MonoBehaviour
+public class PlayerMovementScript : MonoBehaviour
 {
+    [Header("Keyboard Bindings")]
     public KeyCode left;
     public KeyCode right;
     public KeyCode jump;
 
+    [Header("Movement Settings")]
     [SerializeField] float movementSpeed = 5f;
-
     [SerializeField] float jumpPower = 20f;
-
     public bool isGrounded;
-    bool doubleJump;
 
-    [SerializeField] Rigidbody2D rb;
+    [Header("Animation")]
+    [SerializeField] PlayerAnimation playerAnim;
+
+    [Header("Abilities")]
+    [SerializeField] bool enableDoubleJump;
+    [SerializeField] bool enableCrouch;
+    [SerializeField] bool enableCrawl;
+    bool doubleJump;
 
     // Start is called before the first frame update
     void Start()
@@ -29,24 +35,25 @@ public class FlikMovement : MonoBehaviour
         var velocity = GetComponent<Rigidbody2D>().velocity;
         var rbComponent = GetComponent<Rigidbody2D>();
 
-
+        //Movement
         if (Input.GetKey(left))
         {
             velocity = new Vector2(-movementSpeed, velocity.y);
             transform.rotation = Quaternion.Euler(0, 180, 0);
-            print("moving left");
+            playerAnim.PlayRunning(true);
         }
 
         else if (Input.GetKey(right))
         {
             velocity = new Vector3(movementSpeed, velocity.y);
             transform.rotation = Quaternion.identity;
-            print("moving right");
+            playerAnim.PlayRunning(true);
         }
 
         else
         {
             velocity = new Vector3(0, velocity.y);
+            playerAnim.PlayRunning(false);
         }
 
         if (isGrounded && !Input.GetKeyDown(jump))
@@ -54,18 +61,33 @@ public class FlikMovement : MonoBehaviour
             doubleJump = false;
         }
 
+        //Jumping
         if (Input.GetKeyDown(jump))
         {
-            if (isGrounded|| doubleJump)
+            //if flik
+            if (enableDoubleJump)
             {
-                velocity = new Vector3(velocity.x, jumpPower);
-                doubleJump = !doubleJump;
+                if (isGrounded || doubleJump)
+                {
+                    playerAnim.PlayJump();
+                    velocity = new Vector3(velocity.x, jumpPower);
+                    doubleJump = !doubleJump;
+                }
             }
-
-            print("jumping");
+            // if flak
+            else
+            {
+                if (isGrounded)
+                {
+                    playerAnim.PlayJump();
+                    velocity = new Vector3(velocity.x, jumpPower);
+                }
+            }
         }
 
         rbComponent.velocity = velocity;
+
+        //**Insert Crouching below this line**
     }
 
 
@@ -85,5 +107,4 @@ public class FlikMovement : MonoBehaviour
             isGrounded = false;
         }
     }
-
 }
