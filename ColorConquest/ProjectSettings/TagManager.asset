@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Star
   - Key
+  - Gray
+  - Ink
   layers:
   - Default
   - TransparentFX
