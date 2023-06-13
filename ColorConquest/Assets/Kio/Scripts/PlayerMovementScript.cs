@@ -17,6 +17,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     [Header("Animation")]
     [SerializeField] PlayerAnimation playerAnim;
+    [SerializeField] SpriteRenderer sr;
 
     [Header("Abilities")]
     [SerializeField] bool enableDoubleJump;
@@ -27,6 +28,7 @@ public class PlayerMovementScript : MonoBehaviour
     public bool moving;
     BoxCollider2D boxCollider;
     Rigidbody2D rb;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -45,15 +47,15 @@ public class PlayerMovementScript : MonoBehaviour
         if (Input.GetKey(left))
         {
             velocity = new Vector2(-movementSpeed, velocity.y);
-            transform.rotation = Quaternion.Euler(0, 180, 0);
             playerAnim.PlayRunning(true);
+            sr.flipX = true;
             moving = true;
         }
 
         else if (Input.GetKey(right))
         {
             velocity = new Vector3(movementSpeed, velocity.y);
-            transform.rotation = Quaternion.identity;
+            sr.flipX = false;
             playerAnim.PlayRunning(true);
             moving = true;
         }
