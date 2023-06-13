@@ -16,7 +16,7 @@ public class StarManager : MonoBehaviour
 
     private void ActivatePlatform()
     {
-        if (currentStars >= starsRequired)
+        if (currentStars >= starsRequired && movingPlatform != null)
         {
             movingPlatform.activatePlatform = true;
         }

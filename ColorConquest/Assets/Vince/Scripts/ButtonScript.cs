@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
+    
     [SerializeField] MovingPlatform movingPlatform;
     [SerializeField] float rayDistance = 0.5f;
     [SerializeField] LayerMask colorRequired;
+    Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -15,10 +22,12 @@ public class ButtonScript : MonoBehaviour
 
         if(hit.collider != null)
         {
-            movingPlatform.activatePlatform = true;
+            animator.SetBool("Pressed", true);
+            //movingPlatform.activatePlatform = true;
         }
         else
         {
+            animator.SetBool("Pressed", false);
             movingPlatform.activatePlatform = false;
         }
     }
