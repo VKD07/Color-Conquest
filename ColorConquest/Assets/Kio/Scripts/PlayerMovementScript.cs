@@ -13,6 +13,8 @@ public class PlayerMovementScript : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float jumpPower = 20f;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] float rayDistance = 0.2f;
     public bool isGrounded;
 
     [Header("Animation")]
@@ -94,6 +96,7 @@ public class PlayerMovementScript : MonoBehaviour
             {
                 if (isGrounded)
                 {
+                    moving = true;
                     playerAnim.PlayJump();
                     velocity = new Vector3(velocity.x, jumpPower);
                 }
@@ -105,8 +108,29 @@ public class PlayerMovementScript : MonoBehaviour
         }
         rbComponent.velocity = velocity;
 
+        CheckIfGrounded();
+
         //**Insert Crouching below this line**/
         Crouching();
+    }
+
+    private void CheckIfGrounded()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(groundCheck.position, -groundCheck.up, rayDistance);
+
+        if(hit.collider != null)
+        {
+            print("object hit");
+            if(hit.collider.gameObject.tag == "Ground" || hit.collider.gameObject.tag == "Player")
+            {
+                isGrounded = true;
+            }
+            
+        }
+        else
+        {
+            isGrounded = false;
+        }
     }
 
     private void Crouching()
@@ -164,20 +188,20 @@ public class PlayerMovementScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Player")
-        {
-            isGrounded = true;
-        }
-    }
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Player")
+    //    {
+    //        isGrounded = true;
+    //    }
+    //}
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Player")
-        {
-            doubleJump = true;
-            isGrounded = false;
-        }
-    }
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Player")
+    //    {
+    //        doubleJump = true;
+    //        isGrounded = false;
+    //    }
+    //}
 }

@@ -10,7 +10,7 @@ public class PlayerMount : MonoBehaviour
     [SerializeField] float rayCastLength = 0.2f;
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         DetectPlayerFromHead();
         UpdateMountedPlayerPosition();
@@ -24,12 +24,10 @@ public class PlayerMount : MonoBehaviour
             if (playerMounted == null && hit.collider.gameObject.CompareTag("Player"))
             {
                 playerMounted = hit.collider.gameObject;
-                playerMounted.transform.SetParent(transform);
             }
         }
         else if (playerMounted != null && playerMounted.GetComponent<PlayerMovementScript>().playerMoving)
         {
-            playerMounted.transform.SetParent(null);
             playerMounted = null;
         }
     }

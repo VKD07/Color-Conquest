@@ -7,18 +7,18 @@ public class StarManager : MonoBehaviour
 {
     [SerializeField] float starsRequired;
     [SerializeField] float currentStars;
-    [SerializeField] MovingPlatform movingPlatform;
+    [SerializeField] GameObject platformToDestroy;
 
     private void Update()
     {
-        ActivatePlatform();
+        DestroyPlatform();
     }
 
-    private void ActivatePlatform()
+    private void DestroyPlatform()
     {
-        if (currentStars >= starsRequired && movingPlatform != null)
+        if (currentStars >= starsRequired && platformToDestroy != null)
         {
-            movingPlatform.activatePlatform = true;
+            Destroy(platformToDestroy);
         }
     }
 

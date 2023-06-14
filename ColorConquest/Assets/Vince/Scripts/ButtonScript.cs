@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
-    
-    [SerializeField] MovingPlatform movingPlatform;
+    [SerializeField] GameObject movingPlatform;
+    //[SerializeField] MovingPlatform movingPlatform;
     [SerializeField] float rayDistance = 0.5f;
     [SerializeField] LayerMask colorRequired;
     Animator animator;
@@ -23,12 +23,14 @@ public class ButtonScript : MonoBehaviour
         if(hit.collider != null)
         {
             animator.SetBool("Pressed", true);
-            movingPlatform.activatePlatform = true;
+            //movingPlatform.activatePlatform = true;
+            movingPlatform.SetActive(false);
         }
         else
         {
             animator.SetBool("Pressed", false);
-            movingPlatform.activatePlatform = false;
+            //movingPlatform.activatePlatform = false;
+            movingPlatform.SetActive(true);
         }
     }
 }

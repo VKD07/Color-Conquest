@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ColoredWater : MonoBehaviour
 {
-    [SerializeField] GameObject flikGameOver;
-    [SerializeField] GameObject flakGameOver;
     public bool flik;
     public bool flak;
 
@@ -17,12 +15,12 @@ public class ColoredWater : MonoBehaviour
 
             if (flak == true && playerMovement.flak == false)
             {
-                flakGameOver.SetActive(true);
+                Destroy(collision.gameObject);
             }
 
             if (flik == true && playerMovement.flik == false)
             {
-                flikGameOver.SetActive(true);
+                Destroy(collision.gameObject);
             }
         }
     }

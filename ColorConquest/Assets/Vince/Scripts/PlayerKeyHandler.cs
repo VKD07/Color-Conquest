@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerKeyHandler : MonoBehaviour
 {
     [SerializeField] float numOfKey;
-
+    [SerializeField] GameObject playerKey;
     public float Key
     {
         get
@@ -19,6 +19,7 @@ public class PlayerKeyHandler : MonoBehaviour
         if(collision.tag == "Key")
         {
             numOfKey += 1;
+            playerKey.SetActive(true);
             Destroy(collision.gameObject);
         }
     }
