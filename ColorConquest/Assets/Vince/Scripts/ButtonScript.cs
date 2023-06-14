@@ -28,7 +28,7 @@ public class ButtonScript : MonoBehaviour
         else
         {
             animator.SetBool("Pressed", false);
-            movingPlatform.activatePlatform = false;
+            //movingPlatform.activatePlatform = false;
         }
     }
 }
