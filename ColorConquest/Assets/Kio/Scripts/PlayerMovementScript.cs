@@ -28,6 +28,10 @@ public class PlayerMovementScript : MonoBehaviour
     public bool moving;
     BoxCollider2D boxCollider;
     Rigidbody2D rb;
+
+    [Header("Player Name")]
+    public bool flik;
+    public bool flak;
     
 
     // Start is called before the first frame update
