@@ -23,12 +23,12 @@ public class ButtonScript : MonoBehaviour
         if(hit.collider != null)
         {
             animator.SetBool("Pressed", true);
-            //movingPlatform.activatePlatform = true;
+            movingPlatform.activatePlatform = true;
         }
         else
         {
             animator.SetBool("Pressed", false);
-            //movingPlatform.activatePlatform = false;
+            movingPlatform.activatePlatform = false;
         }
     }
 }
