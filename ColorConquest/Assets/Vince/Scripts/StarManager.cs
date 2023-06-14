@@ -7,7 +7,7 @@ public class StarManager : MonoBehaviour
 {
     [SerializeField] float starsRequired;
     [SerializeField] float currentStars;
-    [SerializeField] GameObject platformToDestroy;
+    [SerializeField] GameObject [] platformsToDestroy;
 
     private void Update()
     {
@@ -16,9 +16,13 @@ public class StarManager : MonoBehaviour
 
     private void DestroyPlatform()
     {
-        if (currentStars >= starsRequired && platformToDestroy != null)
+        platformsToDestroy = GameObject.FindGameObjectsWithTag("RainBow");
+        for (int i = 0; i < platformsToDestroy.Length; i++)
         {
-            Destroy(platformToDestroy);
+            if (currentStars >= starsRequired && platformsToDestroy.Length > 0)
+            {
+                Destroy(platformsToDestroy[i]);
+            }
         }
     }
 

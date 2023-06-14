@@ -9,6 +9,7 @@ TagManager:
   - Gray
   - Ink
   - Ground
+  - RainBow
   layers:
   - Default
   - TransparentFX
