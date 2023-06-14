@@ -11,7 +11,7 @@ public class FlakMovement : MonoBehaviour
 
     [SerializeField] float movementSpeed = 5f;
 
-    [SerializeField] float jumpPower = 20f;
+    //[SerializeField] float jumpPower = 20f;
 
     [SerializeField] Rigidbody2D rb;
     [SerializeField] PlayerAnimation playerAnim;
