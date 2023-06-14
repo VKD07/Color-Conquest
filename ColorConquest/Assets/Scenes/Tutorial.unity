@@ -3075,6 +3075,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3591076821915795540, guid: 84e7440a5f707184fbf290ae5a9828e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84e7440a5f707184fbf290ae5a9828e5, type: 3}
 --- !u!1001 &3712920242197952040
@@ -3146,6 +3150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2109000439959187151, guid: 106c669d3edaa1440bd86dbdcdbb8bf1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5166160100555156493, guid: 106c669d3edaa1440bd86dbdcdbb8bf1, type: 3}
       propertyPath: m_Name
       value: Flak
