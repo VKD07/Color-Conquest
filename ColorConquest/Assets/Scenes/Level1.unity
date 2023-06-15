@@ -1672,8 +1672,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372306918}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.82, y: -1.528, z: 10.207165}
-  m_LocalScale: {x: 0.07052174, y: 0.27307138, z: 0.21699}
+  m_LocalPosition: {x: 8.57, y: -1.85, z: 10.207165}
+  m_LocalScale: {x: 0.07052174, y: 0.20438093, z: 0.21699}
   m_Children: []
   m_Father: {fileID: 792351979}
   m_RootOrder: 8
@@ -1823,6 +1823,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2109000439959187151, guid: 106c669d3edaa1440bd86dbdcdbb8bf1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5166160100555156493, guid: 106c669d3edaa1440bd86dbdcdbb8bf1, type: 3}
       propertyPath: m_Name
       value: Flak
@@ -2351,6 +2355,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3591076820833463850, guid: 84e7440a5f707184fbf290ae5a9828e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3591076821915795540, guid: 84e7440a5f707184fbf290ae5a9828e5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

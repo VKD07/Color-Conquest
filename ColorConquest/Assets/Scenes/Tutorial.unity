@@ -1356,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6673067314736071879, guid: 75edfbf14ba559b4c9ce47280b30682a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6673067314736071879, guid: 75edfbf14ba559b4c9ce47280b30682a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3037,11 +3037,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3591076820833463850, guid: 84e7440a5f707184fbf290ae5a9828e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.98
+      value: 5.84
       objectReference: {fileID: 0}
     - target: {fileID: 3591076820833463850, guid: 84e7440a5f707184fbf290ae5a9828e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.57
+      value: -3.59
       objectReference: {fileID: 0}
     - target: {fileID: 3591076820833463850, guid: 84e7440a5f707184fbf290ae5a9828e5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3075,8 +3075,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3591076822065359727, guid: 84e7440a5f707184fbf290ae5a9828e5, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 3591076821915795540, guid: 84e7440a5f707184fbf290ae5a9828e5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3094,7 +3094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6673067314736071879, guid: 75edfbf14ba559b4c9ce47280b30682a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6673067314736071879, guid: 75edfbf14ba559b4c9ce47280b30682a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3150,6 +3150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2109000439959187151, guid: 106c669d3edaa1440bd86dbdcdbb8bf1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5166160100555156493, guid: 106c669d3edaa1440bd86dbdcdbb8bf1, type: 3}
       propertyPath: m_Name
       value: Flak
