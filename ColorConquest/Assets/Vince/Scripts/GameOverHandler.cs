@@ -39,16 +39,22 @@ public class GameOverHandler : MonoBehaviour
         {
             gameOverUI[1].SetActive(true);
         }
+        SoundManager.Instance.PlayGameOver();
         pauseGame.PauseTheGame = true;
+     
     }
 
     public void RestartLevel()
     {
+        SoundManager.Instance.PlayBtn();
+        SoundManager.Instance.PlayMainMusic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ReturnToMainMenu()
     {
+        SoundManager.Instance.PlayBtn();
+        SoundManager.Instance.PlayMainMusic();
         SceneManager.LoadScene("MainMenu");
     }
 

@@ -7,11 +7,13 @@ public class MainMenuButtons : MonoBehaviour
 {
     public void StartGame()
     {
+        SoundManager.Instance.PlayBtn();
         SceneManager.LoadScene("Tutorial");
     }
 
     public void ExitGame()
     {
+        SoundManager.Instance.PlayBtn();
         Application.Quit();
     }
 }

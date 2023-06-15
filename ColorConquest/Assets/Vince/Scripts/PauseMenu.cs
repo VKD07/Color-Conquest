@@ -13,12 +13,14 @@ public class PauseMenu : MonoBehaviour
 
    public void OpenInstructions()
     {
+        SoundManager.Instance.PlayBtn();
         pauseGame.PauseTheGame = true;
         InstructionsUI.SetActive(true);
     }
 
     public void CloseInstructions()
     {
+        SoundManager.Instance.PlayBtn();
         pauseGame.PauseTheGame = false;
         InstructionsUI.SetActive(false);
     }

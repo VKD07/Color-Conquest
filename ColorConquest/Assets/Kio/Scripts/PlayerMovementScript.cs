@@ -99,6 +99,7 @@ public class PlayerMovementScript : MonoBehaviour
                     moving = true;
                     playerAnim.PlayJump();
                     velocity = new Vector3(velocity.x, jumpPower);
+                    SoundManager.Instance.PlayJumpSfx();
                 }
             }
         }

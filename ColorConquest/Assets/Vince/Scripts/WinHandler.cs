@@ -26,6 +26,7 @@ public class WinHandler : MonoBehaviour
         {
             if(exitDoor.DoorOpened)
             {
+                SoundManager.Instance.WinSfx();
                 pauseGame.PauseTheGame = true;
                 winScreenUi.SetActive(true);
             }
@@ -42,10 +43,12 @@ public class WinHandler : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
+        SoundManager.Instance.PlayBtn();
     }
 
     public void GoToMain()
     {
+        SoundManager.Instance.PlayBtn();
         SceneManager.LoadScene("MainMenu");
-    }
+    } 
 }
